@@ -1,0 +1,4 @@
+[1118/010139.407:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1118/010628.508:ERROR:directory_reader_win.cc(43)] FindFirstFile: The system cannot find the path specified. (0x3)
+[1118/173014.090:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rus-k\AppData\Local\Temp\scoped_dir25504_935764009\Crashpad\attachments\6eed701a-f0fc-4dad-b2a7-fae9d5bb8cd0: The system cannot find the path specified. (0x3)
+[1118/175736.565:ERROR:filesystem_win.cc(129)] GetFileAttributes C:\Users\rus-k\AppData\Local\Temp\scoped_dir15624_541615027\Crashpad\attachments\4ebf869f-8042-4d97-9977-7b0020446356: The system cannot find the path specified. (0x3)
