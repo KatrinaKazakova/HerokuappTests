@@ -29,7 +29,7 @@ public class LoginPage extends BasePage {
     }
 
     public void successMessageDisplayed(){
-        waitForVisibilityOfElement(errorMessage);
+        waitForVisibilityOfElement(successMessage);
         Assert.assertTrue(successMessage.isDisplayed());
     }
     public void errorMessageDisplayed(){
