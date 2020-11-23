@@ -1,17 +1,18 @@
 package util;
 
 import com.aventstack.extentreports.ExtentReports;
-import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-public class ExtentReporterNGAventstack {
+public class ExtentReport {
 
-    static ExtentReports extent;
+    public static ExtentReports extent;
+    public static ExtentHtmlReporter reporter;
 
     public static ExtentReports getReportObject() {
 
-        String path = System.getProperty("user.dir") + "//test-output//report.html";
-        ExtentSparkReporter reporter = new ExtentSparkReporter(path);
+        String path = System.getProperty("user.dir") + "/test-reports/ExtentReport.html";
+        reporter = new ExtentHtmlReporter(path);
 
         reporter.config().setDocumentTitle("Test Results");
         reporter.config().setReportName("Ekaterina Kazakova Challenge Test");
@@ -21,7 +22,7 @@ public class ExtentReporterNGAventstack {
         extent.attachReporter(reporter);
 
         extent.setSystemInfo("Environment", "Live");
-        extent.setSystemInfo("Tester", "Ekaterina Kazakova");
+        extent.setSystemInfo("QA Engineer", "Ekaterina Kazakova");
         return extent;
     }
 }

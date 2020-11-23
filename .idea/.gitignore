@@ -2,4 +2,4 @@
 /shelf/
 /workspace.xml
 target/classes
-test-output/
+test-reports/ExtentReport.html

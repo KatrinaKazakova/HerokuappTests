@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pageObjects.DynamicControlsPage;
+import pages.DynamicControlsPage;
 
 public class DynamicControlsTest extends Setup {
 

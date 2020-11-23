@@ -41,10 +41,9 @@ ________________________________________________________________________________
 
 There are 2 ways to run a whole suite of tests:
    a. Right click on testng.xml > Run
-   b. From command prompt: Go to project's directory where pom.xml file exists. Run 'mvn clean' command. Run 'mvn test'
-   command.
+   b. From command prompt: Go to project's directory where pom.xml file exists. Run 'mvn test' command.
 
 Test results:
-   a. In test-output/ExtentReport.html - open it in your browser.
+   a. test-reports/ExtentReport.html - open it in the browser.
    b. In console.
-   c. In command prompt after running tests using 'mvn test' maven command.
+   c. In command prompt after running tests using 'mvn test' command.

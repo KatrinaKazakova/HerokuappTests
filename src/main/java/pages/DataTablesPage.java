@@ -1,4 +1,4 @@
-package pageObjects;
+package pages;
 
 import base.BasePage;
 import org.junit.Assert;

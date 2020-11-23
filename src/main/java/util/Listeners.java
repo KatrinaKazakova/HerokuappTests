@@ -10,7 +10,7 @@ import org.testng.ITestResult;
 public class Listeners implements ITestListener {
 
 	ExtentTest test;
-	ExtentReports extent = ExtentReporterNGAventstack.getReportObject();
+	ExtentReports extent = ExtentReport.getReportObject();
 	ThreadLocal<ExtentTest> extentTest = new ThreadLocal<ExtentTest>();
 
 	public void onTestStart(ITestResult result) {
@@ -23,10 +23,12 @@ public class Listeners implements ITestListener {
 	}
 
 	public void onTestFailure(ITestResult result) {
+		extentTest.get().log(Status.FAIL, "Test Failed");
 		extentTest.get().fail(result.getThrowable());
 	}
 
 	public void onTestSkipped(ITestResult result) {
+		extentTest.get().log(Status.SKIP, "Test Skipped");
 	}
 
 	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
@@ -35,10 +37,10 @@ public class Listeners implements ITestListener {
 	public void onTestFailedWithTimeout(ITestResult result) {
 	}
 
-	public void onStart(ITestContext context) {  // before starting any test case
+	public void onStart(ITestContext context) {
 	}
 
-	public void onFinish(ITestContext context) {   // will be executed after each and every test
+	public void onFinish(ITestContext context) {
 		extent.flush();
 	}
 }
